@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <%= display_meta_tags :site => 'Céline Monvoisin', :keywords => 'Céline Monvoisin, architecte, Nantes' %>
+  <%= stylesheet_link_tag    "application" %>
+  <%= csrf_meta_tags %>
+  <meta charset="UTF-8"> 
+</head>
+<body>
+
+
+<%= yield %>
+<%= javascript_include_tag "application" %>
+<script src="https://npmcdn.com/masonry-layout@4.0/dist/masonry.pkgd.min.js"></script>
+<script src="https://npmcdn.com/imagesloaded@4.1/imagesloaded.pkgd.min.js"></script>
+<script async defer data-pin-hover="true" src="//assets.pinterest.com/js/pinit.js"></script>
+</body>
+</html>

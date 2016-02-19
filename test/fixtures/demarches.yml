@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
+
+one:
+  image_principale: MyString
+  texte_principal: MyText
+  cv: MyText
+  visible: false
+
+two:
+  image_principale: MyString
+  texte_principal: MyText
+  cv: MyText
+  visible: false

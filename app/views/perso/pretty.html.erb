@@ -1,0 +1,31 @@
+<div class="grid">
+  <div class="gutter-sizer"></div>
+  <div class="grid-sizer"></div>
+<!--
+  	<% @projects.each do |project| %>
+  	  	<div class="<%= ((rand(6) % 6) == 0) ? 'grid-item grid-item--width2' : 'grid-item' %>">
+      		<%= image_tag project.display_prod %>
+      		<a class="test_link" href="#">
+      		<p class="link_title"><%= project.info.html_safe %></p>
+     		</a>
+  		</div>
+
+	<% end %>
+-->
+    <% @images.each do |image| %>
+  	  	<div class="<%= (image.scale == 2) ? 'grid-item grid-item--width2' : 'grid-item' %>">
+      		<% if (image.filename != nil) %> 
+      			<%= image_tag image.filename %>
+      		<% else %>
+      			<%= image_tag image.uri.url %>
+      		<% end %>
+      		<a class="test_link" href="#">
+      		<p class="link_title"><%= (image.info != nil) ? image.info.html_safe : "Default"%></p>
+     		</a>
+  		</div>
+
+	<% end %>
+ 
+</div>
+
+

@@ -1,0 +1,386 @@
+// Place all the styles related to the projects controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+// Body 1586 x 579
+// Marge haute 2,5% = 14,4875
+// header 23% = 133,17
+$page_top_margin: 2.5%;
+$page_left_margin: 2.5%;
+$page_right_margin: 2.5%;
+
+$header_height: 20.5%;
+
+$content1_width: 47%;
+$content2_width: 23%;
+$content_3_width: 22%;
+$inter_column: 1%;
+
+$sans-serif: sans-serif;
+$global-font: $sans-serif;
+
+html, body {
+    height: 100%;
+    width: 100%;
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+////////////////////////////////////////////////////////////////////////////////////////
+// Gestion du header
+
+
+@font-face
+{
+  font-family: "LocalTechnicbold";
+  src: url('/fonts/technicbold.ttf');
+}
+
+@font-face
+{
+  font-family: "LocalTechnic";
+  src: url('/fonts/technic.ttf');
+}
+
+@font-face
+{
+  font-family: "LocalVineta_BT";
+  src: url('/fonts/vineta-bt-13406.ttf');
+}
+
+#header {
+  height: $header_height;
+  margin-top: $page_top_margin;
+  margin-right: $page_right_margin;
+  margin-left: $page_left_margin;
+}
+#header .colonne {
+  display: inline-block;
+  //height: 100;
+}
+
+#header_1 {
+  height: $header_height;
+  position: absolute;
+  width: $content1_width;
+}
+
+#header_2 {
+  height: $header_height;
+  position: absolute;
+  margin-left: $content1_width+$inter_column;
+  width: $content2_width;
+}
+
+#header_3 {
+  height: $header_height;
+  position: absolute;
+  margin-left: $content1_width+$inter_column+$content2_width+$inter_column;
+  width: $content_3_width;
+}
+
+
+a {
+      text-decoration: none;
+}
+
+.link_selected {
+  color: #FFFF00;
+}
+
+a:link {
+    color: #000000;
+}
+
+a:visited {
+    color: #000000;
+}
+
+#header h1 {
+  text-align: right;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+$break-small: 800px;
+$break-large: 1300px;
+
+  
+#actu {
+  //font-family: "LocalTechnicbold", sans-serif;
+  font-family: $global-font;
+  @media screen and (max-height: $break-large) {
+    font-size: 32px;
+    line-height: 32px;
+  }
+  
+  @media screen and (max-height: $break-small) {
+    font-size: 30px;
+    line-height: 30px;
+  }
+  
+}
+
+#demarche {
+  //font-family: "Sylfaen";
+  font-family: $global-font;
+  @media screen and (max-height: $break-large) {
+    font-size: 32px;
+    line-height: 32px;
+  }
+  
+  @media screen and (max-height: $break-small) {
+    font-size: 30px;
+    line-height: 30px;
+  }
+}
+
+#production {
+  //font-family: "LocalVineta_BT";
+  font-family: $global-font;
+  @media screen and (max-height: $break-large) {
+    font-size: 36px;
+    line-height: 36px;
+  }
+  
+  @media screen and (max-height: $break-small) {
+    font-size: 30px;
+    line-height: 30px;
+  }
+}
+
+#contact {
+  //font-family: "Technicbold", "LocalTechnicbold";
+  font-family: $global-font;
+  @media screen and (max-height: $break-large) {
+    font-size: 32px;
+    line-height: 32px;
+  }
+  
+  @media screen and (max-height: $break-small) {
+    font-size: 30px;
+    line-height: 30px;
+  }
+}
+
+#header nav {
+  display: inline-block;
+  position: absolute;
+  //width: $content1_width+$inter_column+$content2_width+$inter_column;
+  width: 100%;
+}
+
+#header_3 img {
+
+  height: auto;
+  width: 100%;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+////////////////////////////////////////////////////////////////////////////////////////
+
+// applique la marge a 2,5% sur toutes les sections
+section {
+  //border-style:solid;
+  //border-width:1px;
+  
+  margin-top: 0.2%;
+  margin-right: $page_right_margin;
+  margin-left: $page_left_margin;
+}
+
+// height: 4% (3% + 1% de margin-top)
+#bande {
+  height: 3%;
+  //line-height: 3%;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  
+  border-top-style: solid;
+  border-top-width: 1px;
+}
+
+#bande #selected {
+  position: absolute;
+  margin-top: auto;
+  margin-bottom: auto;
+  display: inline-block;
+  font-family: $global-font;
+  font-size: 18px;
+  
+  //line-height: 18px;
+  //vertical-align: middle;
+  //text-align:left;
+}
+
+#bande #en_cours {
+  position: absolute;
+  display: inline-block;
+  margin-top: 0;
+  margin-left: $content1_width+$inter_column+$content2_width+$inter_column;
+  font-family: $global-font;
+  font-size: 18px;
+}
+
+////////////////////////////////////////////////////////////////////////////////////////
+
+#content {
+  height: 72%;
+  //width: 100%
+}
+
+#content .colonne {
+  display: inline-block;
+  //height: 100;
+}
+
+
+// Le position: absolute permet d'avoir le div aligné en haut
+
+#content_1 {
+  position: absolute;
+  width: $content1_width;
+  height: 72%;
+  max-height: 100%;
+}
+
+#content_2 {
+  position: absolute;
+  margin-left: $content1_width+$inter_column;
+  width: $content2_width;
+  font-family: $global-font;
+  font-size: 12px;
+}
+
+.content_projet_texte{
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  -o-hyphens: auto;
+  hyphens: auto;
+  word-wrap: break-word;
+  font-size: 12px;
+}
+
+#content_3 pre{
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  -o-hyphens: auto;
+  hyphens: auto;
+  word-wrap: break-word;
+  white-space: pre-wrap;       /* css-3 */
+  white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+  white-space: -pre-wrap;      /* Opera 4-6 */
+  white-space: -o-pre-wrap;    /* Opera 7 */
+}
+
+#content_3 {
+  position: absolute;
+  margin-left: $content1_width+$inter_column+$content2_width+$inter_column;
+  width: $content_3_width;
+}
+
+#content_3 p {
+  font-family: $global-font;
+  font-size: 10px;
+  
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  
+  border-top-style: solid;
+  border-top-width: 1px;
+  
+}
+
+#content_1 img {
+  height: auto;
+  max-height: 100%;
+  //width: 753px;
+  width: auto;
+  max-width: 100%
+}
+.content_projet {
+  display: inline-block;
+  margin-left: 1%;
+  width: 100%;
+}
+
+.content_projet img {
+  //height: 220px;
+  //width: 368px;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: 40%;
+}
+
+.content_projet_info {
+  //font-family: "courier new regular";
+  font-family: $global-font;
+  font-size: 10px;
+  
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  
+  border-top-style: solid;
+  border-top-width: 1px;
+  
+}
+
+//////////////////////////////////////////////////////////////////
+/////// Production
+
+#production_content {
+  height: 73%;
+  //width: 100%
+}
+
+.production_content_projet {
+  display: inline-block;
+  margin-left: 1.5%;
+  width: 23%;
+  //max-height: 35%;
+}
+
+.production_content_projet img {
+  //height: 220px;
+  //width: 368px;
+  width: auto;
+  max-width: 99%;
+  height: auto;
+  max-height: 100%;
+}
+
+.production_content_projet p {
+  font-family: $global-font;
+  font-size: 10px;
+  
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  
+  border-top-style: solid;
+  border-top-width: 1px;
+  
+}
+
+#project_title {
+  position: absolute;
+  display: inline-block;
+  margin-top: 0;
+  margin-left: $content1_width+$inter_column;
+  //width: $content2_width;
+  @media screen and (max-height: $break-large) {
+    font-size: 22px;
+    line-height: 22px;
+  }
+  
+  @media screen and (max-height: $break-small) {
+    font-size: 18px;
+    line-height: 18px;
+  }
+}
+
