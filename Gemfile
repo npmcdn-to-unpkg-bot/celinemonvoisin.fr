@@ -2,6 +2,14 @@ source 'http://rubygems.org'
 
 gem 'rails'
 
+group :development do
+  gem 'net-ssh', '~>2.9.2'
+  gem 'capistrano'
+  gem 'capistrano-passenger'
+  gem 'capistrano-rvm'
+  gem 'rvm-capistrano'
+  gem 'capistrano-rails'
+end
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
