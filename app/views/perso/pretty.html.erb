@@ -8,9 +8,7 @@
       		<% else %>
       			<%= image_tag image.uri.url %>
       		<% end %>
-      		<a class="test_link" href="#">
       		<p class="link_title"><%= (image.info != nil) ? image.info.html_safe : "Default"%></p>
-     		</a>
   		</div>
 
 	<% end %>
