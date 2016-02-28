@@ -26,16 +26,8 @@ $( document ).ready(function() {
 	    $(".grid").masonry({
 	    	  // options
 	    	  itemSelector: '.grid-item',
-	    	  //gutter: '.gutter-sizer',
-	    	  gutter: function() {
-	    	      // 5 columns
-	    		  return this.size.innerWidth / 100;
-	    	    },
-	    	  //columnWidth: '.grid-sizer'
-	    	  columnWidth: function() {
-	    	      // 5 columns
-	    		  return this.size.innerWidth / 5;
-	    	    }
+	    	  gutter: '.gutter-sizer',
+	    	  columnWidth: '.grid-sizer'
 	    	});
     });
     
